@@ -83,6 +83,11 @@
 	</div>
 	<th:block layout:fragment="script">
 <script th:inline="javascript">
+		var errorMessage = [[${errorMessage}]];
+		if(errorMessage != null) {
+			alert(errorMessage);
+		}
+
 	    function sendIt() {
 		//const sendIt = () => {
 		var f = document.myForm; //폼 태그
